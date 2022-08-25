@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Z0172424\\Desktop\\projects\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {}
+    "C:\\Users\\micha\\OneDrive\\Pulpit\\HotelAPI\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Z0172424\\Desktop\\projects\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {
+    "C:\\Users\\micha\\OneDrive\\Pulpit\\HotelAPI\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Z0172424\\Desktop\\projects\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
+        "projectUniqueName": "C:\\Users\\micha\\OneDrive\\Pulpit\\HotelAPI\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
         "projectName": "HotelAPI",
-        "projectPath": "C:\\Users\\Z0172424\\Desktop\\projects\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
-        "packagesPath": "C:\\Users\\Z0172424\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Z0172424\\Desktop\\projects\\HotelAPI\\HotelAPI\\obj\\",
+        "projectPath": "C:\\Users\\micha\\OneDrive\\Pulpit\\HotelAPI\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
+        "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micha\\OneDrive\\Pulpit\\HotelAPI\\HotelAPI\\HotelAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Z0172424\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.0, )",
@@ -91,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

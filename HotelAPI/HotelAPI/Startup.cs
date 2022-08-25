@@ -1,4 +1,5 @@
 using HotelAPI.Entities;
+using HotelAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,10 +32,12 @@ namespace HotelAPI
 
             services.AddControllers();
 
+            services.AddScoped<IHotelService, HotelService>();
+
             services.AddDbContext<HotelDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("HotelDbConnection")));
-
             services.AddScoped<HotelSeeder>();
+            services.AddAutoMapper(this.GetType().Assembly);
 
             services.AddSwaggerGen(c =>
             {
