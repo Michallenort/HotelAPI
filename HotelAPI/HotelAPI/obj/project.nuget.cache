@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OYFB8Da4KzAFc4n2uuY/EnP3IeLkvV3Jp8n82oFDXFgiNLyFrxKCUJxjQuBVej1YrWv8uIxfc8jFeWB6fMjQpA==",
+  "dgSpecHash": "4LwoQ3PYRRNKyMHvFjp5JpGSu7jodYcv5d1T2KiEioq1x5vBWpo1CS69LQh0R3llFeCeGz+Xl5ytd9fPE0DFWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\micha\\OneDrive\\Pulpit\\HotelAPI\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,9 @@
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\micha\\.nuget\\packages\\nlog\\5.0.2\\nlog.5.0.2.nupkg.sha512",
+    "C:\\Users\\micha\\.nuget\\packages\\nlog.extensions.logging\\5.0.2\\nlog.extensions.logging.5.0.2.nupkg.sha512",
+    "C:\\Users\\micha\\.nuget\\packages\\nlog.web.aspnetcore\\5.1.1\\nlog.web.aspnetcore.5.1.1.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",

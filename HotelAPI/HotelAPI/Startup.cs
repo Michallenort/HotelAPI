@@ -1,4 +1,5 @@
 using HotelAPI.Entities;
+using HotelAPI.Middleware;
 using HotelAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -44,7 +45,7 @@ namespace HotelAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelAPI", Version = "v1" });
             });
 
-
+            services.AddScoped<ErrorHandlingMiddleware>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +59,8 @@ namespace HotelAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HotelAPI v1"));
             }
+
+            app.UseMiddleware<ErrorHandlingMiddleware>();
 
             app.UseHttpsRedirection();
 

@@ -1,0 +1,1219 @@
+2022-08-26 11:01:06.8797||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-08-26 11:01:07.1204||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-08-26 11:01:07.6932||DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property '"RoomId"."Reservation"' was created in shadow state because there are no eligible CLR members with a matching name. 
+2022-08-26 11:01:07.8333||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 11:01:07.8815||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:09.1396||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:09.1396||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-08-26 11:01:09.1576||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (5ms). 
+2022-08-26 11:01:09.1576||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-08-26 11:01:09.1917||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-08-26 11:01:09.1917||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:09.1977||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:09.2625||DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Hotel>()
+    .Any()' 
+2022-08-26 11:01:09.4633||DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            Projection Mapping:
+            SELECT 1
+            FROM Hotels AS h)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    HotelAPI.Entities.HotelDbContext, 
+    False, 
+    False
+)
+    .Single()' 
+2022-08-26 11:01:09.4932||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 11:01:09.4932||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 11:01:09.4932||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:09.4951||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:09.4951||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Hotels] AS [h]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-08-26 11:01:09.4951||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Hotels] AS [h]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-08-26 11:01:09.5178||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 11:01:09.5178||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:09.5178||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:09.6297||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 11:01:09.7828||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: AE5E43081512AC28557EC150D4E09518E4F5F097) 
+2022-08-26 11:01:09.8542||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-08-26 11:01:09.8542||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-08-26 11:01:09.8542||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly HotelAPI 
+2022-08-26 11:01:09.8542||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-08-26 11:01:09.8542||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2022-08-26 11:01:09.8542||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-08-26 11:01:09.8542||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-08-26 11:01:09.8542||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Z0172424\Desktop\HotelAPI\HotelAPI 
+2022-08-26 11:01:09.8542||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-08-26 11:01:10.3420||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK7862ITQ75" received FIN. 
+2022-08-26 11:01:10.3420||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK7862ITQ74" received FIN. 
+2022-08-26 11:01:10.3589||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7862ITQ75" accepted. 
+2022-08-26 11:01:10.3589||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7862ITQ74" accepted. 
+2022-08-26 11:01:10.3589||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7862ITQ74" started. 
+2022-08-26 11:01:10.3589||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7862ITQ75" started. 
+2022-08-26 11:01:10.3733||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-08-26 11:01:10.3733||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-08-26 11:01:10.4946||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7862ITQ75" stopped. 
+2022-08-26 11:01:10.4946||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7862ITQ74" stopped. 
+2022-08-26 11:01:10.4946||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK7862ITQ74" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-08-26 11:01:10.4946||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK7862ITQ75" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-08-26 11:01:21.2161||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-08-26 11:01:21.6247||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-08-26 11:01:22.2402||DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property '"RoomId"."Reservation"' was created in shadow state because there are no eligible CLR members with a matching name. 
+2022-08-26 11:01:22.3743||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 11:01:22.4118||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:22.6908||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:22.6979||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-08-26 11:01:22.6979||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (4ms). 
+2022-08-26 11:01:22.6979||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-08-26 11:01:22.7334||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-08-26 11:01:22.7334||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:22.7334||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:22.8035||DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Hotel>()
+    .Any()' 
+2022-08-26 11:01:22.9576||DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            Projection Mapping:
+            SELECT 1
+            FROM Hotels AS h)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    HotelAPI.Entities.HotelDbContext, 
+    False, 
+    False
+)
+    .Single()' 
+2022-08-26 11:01:22.9845||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 11:01:22.9845||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 11:01:22.9845||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:22.9845||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:22.9845||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Hotels] AS [h]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-08-26 11:01:23.0048||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Hotels] AS [h]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-08-26 11:01:23.0164||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 11:01:23.0164||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:23.0164||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:01:23.0914||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 11:01:23.2260||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: AE5E43081512AC28557EC150D4E09518E4F5F097) 
+2022-08-26 11:01:23.2800||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-08-26 11:01:23.2800||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-08-26 11:01:23.2800||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly HotelAPI 
+2022-08-26 11:01:23.2800||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-08-26 11:01:23.2800||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2022-08-26 11:01:23.2800||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-08-26 11:01:23.2800||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-08-26 11:01:23.2800||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Z0172424\Desktop\HotelAPI\HotelAPI 
+2022-08-26 11:01:23.2800||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-08-26 11:01:23.7313||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK7866IJB9O" received FIN. 
+2022-08-26 11:01:23.7313||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9O" accepted. 
+2022-08-26 11:01:23.7313||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9O" started. 
+2022-08-26 11:01:23.7536||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-08-26 11:01:23.7995||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9O" stopped. 
+2022-08-26 11:01:23.7995||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK7866IJB9O" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-08-26 11:01:34.4355||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9P" accepted. 
+2022-08-26 11:01:34.4355||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9P" started. 
+2022-08-26 11:01:34.4355||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK7866IJB9P" received FIN. 
+2022-08-26 11:01:34.4355||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9Q" accepted. 
+2022-08-26 11:01:34.4355||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9Q" started. 
+2022-08-26 11:01:34.4477||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-08-26 11:01:34.4477||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9P" stopped. 
+2022-08-26 11:01:34.4477||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK7866IJB9P" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-08-26 11:01:34.5028||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection "0HMK7866IJB9Q" established using the following protocol: Tls12 
+2022-08-26 11:01:34.5502||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:5001/api/hotel/4 application/json 146 
+2022-08-26 11:01:34.5649||DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-08-26 11:01:34.5649||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 11:01:34.5864||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-08-26 11:01:38.6505||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel/4' 
+2022-08-26 11:01:38.6529||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' with route pattern 'api/hotel/{id}' is valid for the request path '/api/hotel/4' 
+2022-08-26 11:01:38.6529||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 11:01:38.6529||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 11:01:38.6529||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-08-26 11:01:38.6798||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetById", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[HotelAPI.Models.HotelDto] GetById(Int32) on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 11:01:38.6798||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 11:01:38.6798||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 11:01:38.6798||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 11:01:38.6798||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 11:01:38.6798||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 11:01:38.6798||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 11:02:06.1876||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 11:02:06.2039||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-26 11:02:06.2039||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-26 11:02:06.2039||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 11:02:06.2039||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 11:02:06.2039||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-26 11:02:06.2039||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-26 11:02:06.2039||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 11:02:06.2039||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 11:02:06.2039||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 11:02:06.2039||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 11:02:06.2039||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.GetById (HotelAPI) - Validation state: Valid 
+2022-08-26 11:02:06.2039||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.GetById (HotelAPI) with arguments (4) 
+2022-08-26 11:02:06.6370||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 11:02:06.6370||DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Hotel>()
+    .Include(r => r.Address)
+    .Include(r => r.Rooms)
+    .FirstOrDefault(h => h.Id == __id_0)' 
+2022-08-26 11:02:06.6808||DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Hotel.Address'. 
+2022-08-26 11:02:06.6808||DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Hotel.Rooms'. 
+2022-08-26 11:02:06.7919||DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Hotel>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+        SELECT t.Id, t.AddressId, t.Category, t.ContactEmail, t.ContactNumber, t.Description, t.Name, t.Id0, t.City, t.PostalCode, t.Street, r.Id, r.GuestsNumber, r.HotelId, r.Number, r.Type
+        FROM Projection Mapping:
+        (
+            SELECT TOP(1) h.Id, h.AddressId, h.Category, h.ContactEmail, h.ContactNumber, h.Description, h.Name, a.Id AS Id0, a.City, a.PostalCode, a.Street
+            FROM Hotels AS h
+            INNER JOIN Addresses AS a ON h.AddressId == a.Id
+            WHERE h.Id == @__id_0
+        ) AS t
+        LEFT JOIN Rooms AS r ON t.Id == r.HotelId
+        ORDER BY t.Id ASC, t.Id0 ASC, r.Id ASC), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Hotel>, 
+    HotelAPI.Entities.HotelDbContext, 
+    False, 
+    False
+)
+    .SingleOrDefault()' 
+2022-08-26 11:02:06.7919||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 11:02:06.7919||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 11:02:06.7919||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:02:06.7919||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:02:06.7919||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[AddressId], [t].[Category], [t].[ContactEmail], [t].[ContactNumber], [t].[Description], [t].[Name], [t].[Id0], [t].[City], [t].[PostalCode], [t].[Street], [r].[Id], [r].[GuestsNumber], [r].[HotelId], [r].[Number], [r].[Type]
+FROM (
+    SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name], [a].[Id] AS [Id0], [a].[City], [a].[PostalCode], [a].[Street]
+    FROM [Hotels] AS [h]
+    INNER JOIN [Addresses] AS [a] ON [h].[AddressId] = [a].[Id]
+    WHERE [h].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Rooms] AS [r] ON [t].[Id] = [r].[HotelId]
+ORDER BY [t].[Id], [t].[Id0], [r].[Id] 
+2022-08-26 11:02:06.8372||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (34ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[AddressId], [t].[Category], [t].[ContactEmail], [t].[ContactNumber], [t].[Description], [t].[Name], [t].[Id0], [t].[City], [t].[PostalCode], [t].[Street], [r].[Id], [r].[GuestsNumber], [r].[HotelId], [r].[Number], [r].[Type]
+FROM (
+    SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name], [a].[Id] AS [Id0], [a].[City], [a].[PostalCode], [a].[Street]
+    FROM [Hotels] AS [h]
+    INNER JOIN [Addresses] AS [a] ON [h].[AddressId] = [a].[Id]
+    WHERE [h].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Rooms] AS [r] ON [t].[Id] = [r].[HotelId]
+ORDER BY [t].[Id], [t].[Id0], [r].[Id] 
+2022-08-26 11:02:06.8691||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Hotel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 11:02:06.8998||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Address' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 11:02:06.9160||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 11:02:06.9160||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:02:06.9160||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 11:02:08.7212||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HotelAPI.Controllers.HotelController.GetById (HotelAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2501.9712ms. 
+2022-08-26 11:02:08.7212||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 11:02:08.7212||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 11:02:08.7212||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 11:02:08.7212||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 11:02:08.7212||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 11:02:08.7212||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 11:02:08.7212||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-08-26 11:02:08.7212||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-08-26 11:02:08.7286||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-08-26 11:02:08.7286||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-08-26 11:02:08.7286||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-08-26 11:02:08.7286||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-08-26 11:02:08.7286||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'HotelAPI.Models.HotelDto'. 
+2022-08-26 11:02:11.2802||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-08-26 11:02:11.2802||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 11:02:11.2802||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 11:02:11.2802||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.GetById (HotelAPI) in 32599.7673ms 
+2022-08-26 11:02:11.2802||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 11:02:13.8126||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9Q" completed keep alive response. 
+2022-08-26 11:02:13.8126||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 11:02:13.8126||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:5001/api/hotel/4 application/json 146 - 200 - application/json;+charset=utf-8 39278.7288ms 
+2022-08-26 11:02:13.8301||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9Q", Request id "0HMK7866IJB9Q:00000002": started reading request body. 
+2022-08-26 11:02:13.8301||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK7866IJB9Q", Request id "0HMK7866IJB9Q:00000002": done reading request body. 
+2022-08-26 12:05:55.3422||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-08-26 12:05:55.6680||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-08-26 12:05:56.2417||DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property '"RoomId"."Reservation"' was created in shadow state because there are no eligible CLR members with a matching name. 
+2022-08-26 12:05:56.3910||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:05:56.4285||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'otelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:05:57.5516||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'otelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:05:57.6602||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:05:57.8281||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: AE5E43081512AC28557EC150D4E09518E4F5F097) 
+2022-08-26 12:05:57.9141||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-08-26 12:05:57.9141||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-08-26 12:05:57.9141||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly HotelAPI 
+2022-08-26 12:05:57.9141||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-08-26 12:05:57.9141||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2022-08-26 12:05:57.9202||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-08-26 12:05:57.9202||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-08-26 12:05:57.9202||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Z0172424\Desktop\HotelAPI\HotelAPI 
+2022-08-26 12:05:57.9202||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-08-26 12:05:58.0741||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9K" accepted. 
+2022-08-26 12:05:58.0754||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9K" started. 
+2022-08-26 12:05:58.1028||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK79A976C9K" received FIN. 
+2022-08-26 12:05:58.1080||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-08-26 12:05:58.1406||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9K" stopped. 
+2022-08-26 12:05:58.1406||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK79A976C9K" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-08-26 12:06:06.2944||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK79A976C9L" received FIN. 
+2022-08-26 12:06:06.2944||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9L" accepted. 
+2022-08-26 12:06:06.2944||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9L" started. 
+2022-08-26 12:06:06.3292||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-08-26 12:06:06.3292||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9M" accepted. 
+2022-08-26 12:06:06.3292||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9M" started. 
+2022-08-26 12:06:06.3292||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9L" stopped. 
+2022-08-26 12:06:06.3292||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK79A976C9L" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-08-26 12:06:06.3806||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection "0HMK79A976C9M" established using the following protocol: Tls12 
+2022-08-26 12:06:06.4401||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:5001/api/hotel/4 application/json 146 
+2022-08-26 12:06:06.4542||DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-08-26 12:06:06.4542||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 12:06:06.4952||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-08-26 12:06:06.5261||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel/4' 
+2022-08-26 12:06:06.5285||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' with route pattern 'api/hotel/{id}' is valid for the request path '/api/hotel/4' 
+2022-08-26 12:06:06.5285||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 12:06:06.5285||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 12:06:06.5285||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-08-26 12:06:06.5558||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetById", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[HotelAPI.Models.HotelDto] GetById(Int32) on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 12:06:06.5558||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 12:06:06.5558||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 12:06:06.5558||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 12:06:06.5558||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 12:06:06.5558||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 12:06:06.5558||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:06:06.7204||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:06:06.7353||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:06:06.7353||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-26 12:06:06.7353||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:06:06.7353||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:06:06.7353||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:06:06.7353||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:06:06.7353||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:06:06.7353||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:06:06.7353||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:06:06.7353||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:06:06.7353||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.GetById (HotelAPI) - Validation state: Valid 
+2022-08-26 12:06:06.7353||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.GetById (HotelAPI) with arguments (4) 
+2022-08-26 12:06:06.7475||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:06:06.8138||DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Hotel>()
+    .Include(r => r.Address)
+    .Include(r => r.Rooms)
+    .FirstOrDefault(h => h.Id == __id_0)' 
+2022-08-26 12:06:06.9176||DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Hotel.Address'. 
+2022-08-26 12:06:06.9176||DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Hotel.Rooms'. 
+2022-08-26 12:06:07.1294||DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Hotel>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+        SELECT t.Id, t.AddressId, t.Category, t.ContactEmail, t.ContactNumber, t.Description, t.Name, t.Id0, t.City, t.PostalCode, t.Street, r.Id, r.GuestsNumber, r.HotelId, r.Number, r.Type
+        FROM Projection Mapping:
+        (
+            SELECT TOP(1) h.Id, h.AddressId, h.Category, h.ContactEmail, h.ContactNumber, h.Description, h.Name, a.Id AS Id0, a.City, a.PostalCode, a.Street
+            FROM Hotels AS h
+            INNER JOIN Addresses AS a ON h.AddressId == a.Id
+            WHERE h.Id == @__id_0
+        ) AS t
+        LEFT JOIN Rooms AS r ON t.Id == r.HotelId
+        ORDER BY t.Id ASC, t.Id0 ASC, r.Id ASC), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Hotel>, 
+    HotelAPI.Entities.HotelDbContext, 
+    False, 
+    False
+)
+    .SingleOrDefault()' 
+2022-08-26 12:06:07.1582||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:06:07.1582||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (2ms). 
+2022-08-26 12:06:07.1728||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'otelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:06:17.2492||ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'otelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:06:17.2745||ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'HotelAPI.Entities.HotelDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "otelDb" requested by the login. The login failed.
+Login failed for user 'ZF-WORLD\Z0172424'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:e24fe94b-24df-4998-9559-fad93ad405d8
+Error Number:4060,State:1,Class:11 Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "otelDb" requested by the login. The login failed.
+Login failed for user 'ZF-WORLD\Z0172424'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:e24fe94b-24df-4998-9559-fad93ad405d8
+Error Number:4060,State:1,Class:11
+2022-08-26 12:06:31.5146||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:06:31.5146||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:06:31.5146||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:06:31.5146||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:06:31.5146||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.GetById (HotelAPI) in 24958.9826ms 
+2022-08-26 12:06:31.5146||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 12:06:31.6060||ERROR|HotelAPI.Middleware.ErrorHandlingMiddleware|Cannot open database "otelDb" requested by the login. The login failed.
+Login failed for user 'ZF-WORLD\Z0172424'. Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "otelDb" requested by the login. The login failed.
+Login failed for user 'ZF-WORLD\Z0172424'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HotelAPI.Services.HotelService.GetById(Int32 id) in C:\Users\Z0172424\Desktop\HotelAPI\HotelAPI\Services\HotelService.cs:line 48
+   at HotelAPI.Controllers.HotelController.GetById(Int32 id) in C:\Users\Z0172424\Desktop\HotelAPI\HotelAPI\Controllers\HotelController.cs:line 39
+   at lambda_method7(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at HotelAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Z0172424\Desktop\HotelAPI\HotelAPI\Middleware\ErrorHandlingMiddleware.cs:line 24
+ClientConnectionId:e24fe94b-24df-4998-9559-fad93ad405d8
+Error Number:4060,State:1,Class:11
+2022-08-26 12:06:31.6103||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9M" completed keep alive response. 
+2022-08-26 12:06:31.6103||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:06:31.6103||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:5001/api/hotel/4 application/json 146 - 500 - - 25174.3523ms 
+2022-08-26 12:06:31.6239||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9M", Request id "0HMK79A976C9M:00000002": started reading request body. 
+2022-08-26 12:06:31.6239||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79A976C9M", Request id "0HMK79A976C9M:00000002": done reading request body. 
+2022-08-26 12:30:09.7427||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-08-26 12:30:10.0819||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-08-26 12:30:10.9001||DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property '"RoomId"."Reservation"' was created in shadow state because there are no eligible CLR members with a matching name. 
+2022-08-26 12:30:11.0412||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:30:11.0848||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:12.3590||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:12.3590||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2022-08-26 12:30:12.3767||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (4ms). 
+2022-08-26 12:30:12.3866||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-08-26 12:30:12.4216||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2022-08-26 12:30:12.4216||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:12.4216||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:12.5176||DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Hotel>()
+    .Any()' 
+2022-08-26 12:30:12.7218||DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            Projection Mapping:
+            SELECT 1
+            FROM Hotels AS h)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    HotelAPI.Entities.HotelDbContext, 
+    False, 
+    False
+)
+    .Single()' 
+2022-08-26 12:30:12.7547||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:30:12.7547||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:30:12.7547||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:12.7547||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:12.7547||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Hotels] AS [h]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-08-26 12:30:12.7665||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Hotels] AS [h]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2022-08-26 12:30:12.7779||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:30:12.7779||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:12.7779||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:12.8754||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:30:13.0279||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: AE5E43081512AC28557EC150D4E09518E4F5F097) 
+2022-08-26 12:30:13.1125||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-08-26 12:30:13.1125||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-08-26 12:30:13.1125||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly HotelAPI 
+2022-08-26 12:30:13.1125||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-08-26 12:30:13.1125||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2022-08-26 12:30:13.1125||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-08-26 12:30:13.1125||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-08-26 12:30:13.1216||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Z0172424\Desktop\HotelAPI\HotelAPI 
+2022-08-26 12:30:13.1216||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-08-26 12:30:13.1425||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK79NQRR5F5" received FIN. 
+2022-08-26 12:30:13.1566||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F5" accepted. 
+2022-08-26 12:30:13.1566||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F5" started. 
+2022-08-26 12:30:13.1766||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-08-26 12:30:13.2109||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F5" stopped. 
+2022-08-26 12:30:13.2109||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK79NQRR5F5" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-08-26 12:30:21.6684||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F6" accepted. 
+2022-08-26 12:30:21.6684||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F6" started. 
+2022-08-26 12:30:21.6684||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK79NQRR5F6" received FIN. 
+2022-08-26 12:30:21.6684||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" accepted. 
+2022-08-26 12:30:21.6684||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" started. 
+2022-08-26 12:30:21.6684||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-08-26 12:30:21.6844||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F6" stopped. 
+2022-08-26 12:30:21.6844||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK79NQRR5F6" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-08-26 12:30:21.7209||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection "0HMK79NQRR5F7" established using the following protocol: Tls12 
+2022-08-26 12:30:21.7587||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:5001/api/hotel/4 application/json 146 
+2022-08-26 12:30:21.7770||DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-08-26 12:30:21.7770||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 12:30:21.7984||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-08-26 12:30:21.8269||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel/4' 
+2022-08-26 12:30:21.8269||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' with route pattern 'api/hotel/{id}' is valid for the request path '/api/hotel/4' 
+2022-08-26 12:30:21.8269||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 12:30:21.8269||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 12:30:21.8269||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-08-26 12:30:21.8597||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetById", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[HotelAPI.Models.HotelDto] GetById(Int32) on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 12:30:21.8597||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 12:30:21.8597||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 12:30:21.8597||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 12:30:21.8597||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 12:30:21.8597||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 12:30:21.8597||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:30:22.0279||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:30:22.0279||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:30:22.0435||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-26 12:30:22.0435||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:30:22.0435||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:30:22.0435||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:30:22.0435||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:30:22.0435||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:30:22.0435||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:30:22.0435||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:30:22.0435||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:30:22.0435||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.GetById (HotelAPI) - Validation state: Valid 
+2022-08-26 12:30:22.0435||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.GetById (HotelAPI) with arguments (4) 
+2022-08-26 12:30:22.0435||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:30:22.0669||DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Hotel>()
+    .Include(r => r.Address)
+    .Include(r => r.Rooms)
+    .FirstOrDefault(h => h.Id == __id_0)' 
+2022-08-26 12:30:22.1022||DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Hotel.Address'. 
+2022-08-26 12:30:22.1022||DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Hotel.Rooms'. 
+2022-08-26 12:30:22.2439||DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Hotel>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+        SELECT t.Id, t.AddressId, t.Category, t.ContactEmail, t.ContactNumber, t.Description, t.Name, t.Id0, t.City, t.PostalCode, t.Street, r.Id, r.GuestsNumber, r.HotelId, r.Number, r.Type
+        FROM Projection Mapping:
+        (
+            SELECT TOP(1) h.Id, h.AddressId, h.Category, h.ContactEmail, h.ContactNumber, h.Description, h.Name, a.Id AS Id0, a.City, a.PostalCode, a.Street
+            FROM Hotels AS h
+            INNER JOIN Addresses AS a ON h.AddressId == a.Id
+            WHERE h.Id == @__id_0
+        ) AS t
+        LEFT JOIN Rooms AS r ON t.Id == r.HotelId
+        ORDER BY t.Id ASC, t.Id0 ASC, r.Id ASC), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Hotel>, 
+    HotelAPI.Entities.HotelDbContext, 
+    False, 
+    False
+)
+    .SingleOrDefault()' 
+2022-08-26 12:30:22.2497||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:30:22.2497||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:30:22.2497||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:22.2497||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:22.2497||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[AddressId], [t].[Category], [t].[ContactEmail], [t].[ContactNumber], [t].[Description], [t].[Name], [t].[Id0], [t].[City], [t].[PostalCode], [t].[Street], [r].[Id], [r].[GuestsNumber], [r].[HotelId], [r].[Number], [r].[Type]
+FROM (
+    SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name], [a].[Id] AS [Id0], [a].[City], [a].[PostalCode], [a].[Street]
+    FROM [Hotels] AS [h]
+    INNER JOIN [Addresses] AS [a] ON [h].[AddressId] = [a].[Id]
+    WHERE [h].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Rooms] AS [r] ON [t].[Id] = [r].[HotelId]
+ORDER BY [t].[Id], [t].[Id0], [r].[Id] 
+2022-08-26 12:30:22.2903||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (38ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[AddressId], [t].[Category], [t].[ContactEmail], [t].[ContactNumber], [t].[Description], [t].[Name], [t].[Id0], [t].[City], [t].[PostalCode], [t].[Street], [r].[Id], [r].[GuestsNumber], [r].[HotelId], [r].[Number], [r].[Type]
+FROM (
+    SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name], [a].[Id] AS [Id0], [a].[City], [a].[PostalCode], [a].[Street]
+    FROM [Hotels] AS [h]
+    INNER JOIN [Addresses] AS [a] ON [h].[AddressId] = [a].[Id]
+    WHERE [h].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Rooms] AS [r] ON [t].[Id] = [r].[HotelId]
+ORDER BY [t].[Id], [t].[Id0], [r].[Id] 
+2022-08-26 12:30:22.3132||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Hotel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:30:22.3450||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Address' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:30:22.3663||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:30:22.3663||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:22.3663||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:22.3843||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HotelAPI.Controllers.HotelController.GetById (HotelAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 330.334ms. 
+2022-08-26 12:30:22.3843||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:30:22.3843||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:30:22.3843||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:30:22.3843||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:30:22.3843||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:30:22.3843||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:30:22.3843||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-08-26 12:30:22.3880||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-08-26 12:30:22.3880||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-08-26 12:30:22.3880||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-08-26 12:30:22.3880||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-08-26 12:30:22.3880||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-08-26 12:30:22.3880||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'HotelAPI.Models.HotelDto'. 
+2022-08-26 12:30:22.4247||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-08-26 12:30:22.4247||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:30:22.4247||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:30:22.4247||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.GetById (HotelAPI) in 564.0546ms 
+2022-08-26 12:30:22.4247||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 12:30:22.4247||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" completed keep alive response. 
+2022-08-26 12:30:22.4247||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:30:22.4361||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:5001/api/hotel/4 application/json 146 - 200 - application/json;+charset=utf-8 678.0416ms 
+2022-08-26 12:30:22.4492||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000002": started reading request body. 
+2022-08-26 12:30:22.4492||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000002": done reading request body. 
+2022-08-26 12:30:26.6725||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:5001/api/hotel/3 application/json 146 
+2022-08-26 12:30:26.6725||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel/3' 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' with route pattern 'api/hotel/{id}' is valid for the request path '/api/hotel/3' 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 12:30:26.6725||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 12:30:26.6725||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetById", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[HotelAPI.Models.HotelDto] GetById(Int32) on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:30:26.6725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:30:26.6725||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:30:26.6725||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:30:26.6725||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:30:26.6725||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:30:26.6725||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.GetById (HotelAPI) - Validation state: Valid 
+2022-08-26 12:30:26.6725||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.GetById (HotelAPI) with arguments (3) 
+2022-08-26 12:30:26.7087||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:30:26.7087||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:30:26.7087||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:30:26.7087||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:26.7087||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:26.7087||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[AddressId], [t].[Category], [t].[ContactEmail], [t].[ContactNumber], [t].[Description], [t].[Name], [t].[Id0], [t].[City], [t].[PostalCode], [t].[Street], [r].[Id], [r].[GuestsNumber], [r].[HotelId], [r].[Number], [r].[Type]
+FROM (
+    SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name], [a].[Id] AS [Id0], [a].[City], [a].[PostalCode], [a].[Street]
+    FROM [Hotels] AS [h]
+    INNER JOIN [Addresses] AS [a] ON [h].[AddressId] = [a].[Id]
+    WHERE [h].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Rooms] AS [r] ON [t].[Id] = [r].[HotelId]
+ORDER BY [t].[Id], [t].[Id0], [r].[Id] 
+2022-08-26 12:30:26.7087||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[AddressId], [t].[Category], [t].[ContactEmail], [t].[ContactNumber], [t].[Description], [t].[Name], [t].[Id0], [t].[City], [t].[PostalCode], [t].[Street], [r].[Id], [r].[GuestsNumber], [r].[HotelId], [r].[Number], [r].[Type]
+FROM (
+    SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name], [a].[Id] AS [Id0], [a].[City], [a].[PostalCode], [a].[Street]
+    FROM [Hotels] AS [h]
+    INNER JOIN [Addresses] AS [a] ON [h].[AddressId] = [a].[Id]
+    WHERE [h].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Rooms] AS [r] ON [t].[Id] = [r].[HotelId]
+ORDER BY [t].[Id], [t].[Id0], [r].[Id] 
+2022-08-26 12:30:26.7087||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:30:26.7087||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:26.7087||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:30:30.4183||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:30:30.4183||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:30:30.4183||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:30:30.4183||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:30:30.4183||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.GetById (HotelAPI) in 3746.3039ms 
+2022-08-26 12:30:30.4183||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.GetById (HotelAPI)' 
+2022-08-26 12:30:30.4567||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" completed keep alive response. 
+2022-08-26 12:30:30.4567||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:30:30.4567||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:5001/api/hotel/3 application/json 146 - 404 - - 3784.2664ms 
+2022-08-26 12:30:30.4567||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000003": started reading request body. 
+2022-08-26 12:30:30.4567||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000003": done reading request body. 
+2022-08-26 12:31:11.8624||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT https://localhost:5001/api/hotel/3 application/json 146 
+2022-08-26 12:31:11.8624||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel/3' 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.Update (HotelAPI)' with route pattern 'api/hotel/{id}' is valid for the request path '/api/hotel/3' 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.Update (HotelAPI)' 
+2022-08-26 12:31:11.8624||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.Update (HotelAPI)' 
+2022-08-26 12:31:11.8624||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Update", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Update(HotelAPI.Models.UpdateHotelDto, Int32) on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto' ... 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto' using the name '' in request data ... 
+2022-08-26 12:31:11.8624||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000004": started reading request body. 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000004": done reading request body. 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'HotelAPI.Models.UpdateHotelDto' 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto'. 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto'. 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto' ... 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto'. 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:11.8770||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:11.8770||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:11.8770||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:11.8770||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:11.8770||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Update (HotelAPI) - Validation state: Valid 
+2022-08-26 12:31:11.8770||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Update (HotelAPI) with arguments (HotelAPI.Models.UpdateHotelDto, 3) 
+2022-08-26 12:31:11.8770||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:31:11.8770||DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Hotel>()
+    .FirstOrDefault(h => h.Id == __id_0)' 
+2022-08-26 12:31:11.8956||DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Hotel>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Hotel.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Hotel.AddressId (int) Required FK Index, 1], [Property: Hotel.Category (string), 2], [Property: Hotel.ContactEmail (string), 3], [Property: Hotel.ContactNumber (string), 4], [Property: Hotel.Description (string), 5], [Property: Hotel.Name (string) Required MaxLength(40), 6], }
+        SELECT TOP(1) h.Id, h.AddressId, h.Category, h.ContactEmail, h.ContactNumber, h.Description, h.Name
+        FROM Hotels AS h
+        WHERE h.Id == @__id_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Hotel>, 
+    HotelAPI.Entities.HotelDbContext, 
+    False, 
+    False
+)
+    .SingleOrDefault()' 
+2022-08-26 12:31:11.8956||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:31:11.8956||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:31:11.8956||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:11.8956||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:11.8956||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:11.8956||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:11.8956||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:31:11.8956||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:11.8956||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:15.1540||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:15.1540||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:15.1540||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:15.1540||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:15.1540||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.Update (HotelAPI) in 3286.2602ms 
+2022-08-26 12:31:15.1540||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.Update (HotelAPI)' 
+2022-08-26 12:31:15.1866||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" completed keep alive response. 
+2022-08-26 12:31:15.1866||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:31:15.1866||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT https://localhost:5001/api/hotel/3 application/json 146 - 404 - - 3324.2675ms 
+2022-08-26 12:31:24.2144||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT https://localhost:5001/api/hotel/4 application/json 146 
+2022-08-26 12:31:24.2144||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel/4' 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.Update (HotelAPI)' with route pattern 'api/hotel/{id}' is valid for the request path '/api/hotel/4' 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.Update (HotelAPI)' 
+2022-08-26 12:31:24.2176||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.Update (HotelAPI)' 
+2022-08-26 12:31:24.2176||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Update", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Update(HotelAPI.Models.UpdateHotelDto, Int32) on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto' ... 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto' using the name '' in request data ... 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000005": started reading request body. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000005": done reading request body. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'HotelAPI.Models.UpdateHotelDto' 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto' ... 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'dto' of type 'HotelAPI.Models.UpdateHotelDto'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:24.2176||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:24.2176||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:24.2176||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:24.2176||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:24.2176||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Update (HotelAPI) - Validation state: Valid 
+2022-08-26 12:31:24.2176||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Update (HotelAPI) with arguments (HotelAPI.Models.UpdateHotelDto, 4) 
+2022-08-26 12:31:24.2176||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:24.2176||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Hotel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'HotelDbContext'. 
+2022-08-26 12:31:24.2176||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'HotelDbContext'. 
+2022-08-26 12:31:24.2330||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'HotelDbContext'. 
+2022-08-26 12:31:24.2330||DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'HotelDbContext' with 0 entities written to the database. 
+2022-08-26 12:31:24.2330||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HotelAPI.Controllers.HotelController.Update (HotelAPI), returned result Microsoft.AspNetCore.Mvc.OkResult in 14.8421ms. 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkResult. 
+2022-08-26 12:31:24.2330||INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 200 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkResult. 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:24.2330||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:24.2330||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.Update (HotelAPI) in 20.8345ms 
+2022-08-26 12:31:24.2330||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.Update (HotelAPI)' 
+2022-08-26 12:31:24.2330||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" completed keep alive response. 
+2022-08-26 12:31:24.2330||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:31:24.2330||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT https://localhost:5001/api/hotel/4 application/json 146 - 200 0 - 24.9443ms 
+2022-08-26 12:31:31.8074||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE https://localhost:5001/api/hotel/3 application/json 146 
+2022-08-26 12:31:31.8074||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DELETE requests are not supported 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel/3' 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' with route pattern 'api/hotel/{id}' is valid for the request path '/api/hotel/3' 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' 
+2022-08-26 12:31:31.8074||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' 
+2022-08-26 12:31:31.8074||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(Int32) on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 12:31:31.8074||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:31.8098||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:31.8098||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:31.8098||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:31.8098||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:31.8098||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Delete (HotelAPI) - Validation state: Valid 
+2022-08-26 12:31:31.8098||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Delete (HotelAPI) with arguments (3) 
+2022-08-26 12:31:31.8098||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:31.8098||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:31.8098||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:43.7207||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:43.7207||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:43.7207||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:43.7207||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:43.7207||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.Delete (HotelAPI) in 11911.932ms 
+2022-08-26 12:31:43.7207||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' 
+2022-08-26 12:31:43.7553||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" completed keep alive response. 
+2022-08-26 12:31:43.7553||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:31:43.7553||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE https://localhost:5001/api/hotel/3 application/json 146 - 404 - - 11947.8613ms 
+2022-08-26 12:31:43.7553||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000006": started reading request body. 
+2022-08-26 12:31:43.7553||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000006": done reading request body. 
+2022-08-26 12:31:46.5486||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE https://localhost:5001/api/hotel/3 application/json 146 
+2022-08-26 12:31:46.5486||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DELETE requests are not supported 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel/3' 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' with route pattern 'api/hotel/{id}' is valid for the request path '/api/hotel/3' 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' 
+2022-08-26 12:31:46.5486||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' 
+2022-08-26 12:31:46.5486||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(Int32) on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:46.5486||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:46.5486||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:46.5486||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:46.5486||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:46.5486||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Delete (HotelAPI) - Validation state: Valid 
+2022-08-26 12:31:46.5486||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Delete (HotelAPI) with arguments (3) 
+2022-08-26 12:31:46.5486||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:46.5486||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:46.5486||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:46.5874||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:46.5874||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:46.5874||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:46.5874||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:46.5874||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.Delete (HotelAPI) in 38.9571ms 
+2022-08-26 12:31:46.5874||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' 
+2022-08-26 12:31:46.6183||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" completed keep alive response. 
+2022-08-26 12:31:46.6183||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:31:46.6183||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE https://localhost:5001/api/hotel/3 application/json 146 - 404 - - 69.8398ms 
+2022-08-26 12:31:46.6183||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000007": started reading request body. 
+2022-08-26 12:31:46.6183||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000007": done reading request body. 
+2022-08-26 12:31:54.4424||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE https://localhost:5001/api/hotel/4 application/json 146 
+2022-08-26 12:31:54.4424||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DELETE requests are not supported 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel/4' 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' with route pattern 'api/hotel/{id}' is valid for the request path '/api/hotel/4' 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' 
+2022-08-26 12:31:54.4424||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' 
+2022-08-26 12:31:54.4424||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(Int32) on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-26 12:31:54.4424||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:54.4424||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:54.4424||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:54.4424||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:54.4424||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Delete (HotelAPI) - Validation state: Valid 
+2022-08-26 12:31:54.4424||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.Delete (HotelAPI) with arguments (4) 
+2022-08-26 12:31:54.4424||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:54.4424||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Hotel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:54.4424||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:54.4581||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Hotel' tracked by 'HotelDbContext' changed state from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:54.4581||DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'HotelDbContext'. 
+2022-08-26 12:31:54.4581||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'HotelDbContext'. 
+2022-08-26 12:31:54.4581||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'HotelDbContext'. 
+2022-08-26 12:31:54.4581||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:54.4581||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:54.4686||DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-08-26 12:31:54.4686||DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-08-26 12:31:54.5202||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:31:54.5202||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:31:54.5202||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Hotels]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT; 
+2022-08-26 12:31:54.5351||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Hotels]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT; 
+2022-08-26 12:31:54.5351||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:31:54.5351||DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-08-26 12:31:54.5351||DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction. 
+2022-08-26 12:31:54.5351||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:54.5351||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:54.5351||DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-08-26 12:31:54.5473||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Hotel' tracked by 'HotelDbContext' changed state from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:54.5473||DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'HotelDbContext' with 1 entities written to the database. 
+2022-08-26 12:31:54.5473||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HotelAPI.Controllers.HotelController.Delete (HotelAPI), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 103.9233ms. 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.NoContentResult. 
+2022-08-26 12:31:54.5473||INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 204 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.NoContentResult. 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:54.5473||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:54.5473||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.Delete (HotelAPI) in 104.5451ms 
+2022-08-26 12:31:54.5473||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.Delete (HotelAPI)' 
+2022-08-26 12:31:54.5473||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" completed keep alive response. 
+2022-08-26 12:31:54.5473||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:31:54.5473||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE https://localhost:5001/api/hotel/4 application/json 146 - 204 - - 105.4137ms 
+2022-08-26 12:31:54.5473||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000008": started reading request body. 
+2022-08-26 12:31:54.5473||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000008": done reading request body. 
+2022-08-26 12:31:59.6709||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:5001/api/hotel application/json 146 
+2022-08-26 12:31:59.6709||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/hotel' 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HotelAPI.Controllers.HotelController.GetAll (HotelAPI)' with route pattern 'api/hotel' is valid for the request path '/api/hotel' 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HotelAPI.Controllers.HotelController.GetAll (HotelAPI)' 
+2022-08-26 12:31:59.6709||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HotelAPI.Controllers.HotelController.GetAll (HotelAPI)' 
+2022-08-26 12:31:59.6709||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelAPI.Models.HotelDto]] GetAll() on controller HotelAPI.Controllers.HotelController (HotelAPI). 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HotelAPI.Controllers.HotelController (HotelAPI) 
+2022-08-26 12:31:59.6709||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:59.6709||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:59.6709||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:59.6709||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:59.6709||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HotelAPI.Controllers.HotelController.GetAll (HotelAPI) - Validation state: Valid 
+2022-08-26 12:31:59.6709||INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'HotelDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Hotel>()
+    .Include(r => r.Address)
+    .Include(r => r.Rooms)' 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Hotel.Address'. 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Hotel.Rooms'. 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Hotel>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+        SELECT h.Id, h.AddressId, h.Category, h.ContactEmail, h.ContactNumber, h.Description, h.Name, a.Id, a.City, a.PostalCode, a.Street, r.Id, r.GuestsNumber, r.HotelId, r.Number, r.Type
+        FROM Hotels AS h
+        INNER JOIN Addresses AS a ON h.AddressId == a.Id
+        LEFT JOIN Rooms AS r ON h.Id == r.HotelId
+        ORDER BY h.Id ASC, a.Id ASC, r.Id ASC), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Hotel>, 
+    HotelAPI.Entities.HotelDbContext, 
+    False, 
+    False
+)' 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:59.6709||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:59.6858||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name], [a].[Id], [a].[City], [a].[PostalCode], [a].[Street], [r].[Id], [r].[GuestsNumber], [r].[HotelId], [r].[Number], [r].[Type]
+FROM [Hotels] AS [h]
+INNER JOIN [Addresses] AS [a] ON [h].[AddressId] = [a].[Id]
+LEFT JOIN [Rooms] AS [r] ON [h].[Id] = [r].[HotelId]
+ORDER BY [h].[Id], [a].[Id], [r].[Id] 
+2022-08-26 12:31:59.6858||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [h].[Id], [h].[AddressId], [h].[Category], [h].[ContactEmail], [h].[ContactNumber], [h].[Description], [h].[Name], [a].[Id], [a].[City], [a].[PostalCode], [a].[Street], [r].[Id], [r].[GuestsNumber], [r].[HotelId], [r].[Number], [r].[Type]
+FROM [Hotels] AS [h]
+INNER JOIN [Addresses] AS [a] ON [h].[AddressId] = [a].[Id]
+LEFT JOIN [Rooms] AS [r] ON [h].[Id] = [r].[HotelId]
+ORDER BY [h].[Id], [a].[Id], [r].[Id] 
+2022-08-26 12:31:59.6858||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Hotel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:59.6858||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Address' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:59.6858||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Room' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Room' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Hotel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Address' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Room' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'HotelDbContext' started tracking 'Room' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'HotelDb' on server '(localdb)\mssqllocaldb'. 
+2022-08-26 12:31:59.7027||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HotelAPI.Controllers.HotelController.GetAll (HotelAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 39.7154ms. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-08-26 12:31:59.7027||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelAPI.Models.HotelDto, HotelAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:59.7027||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-26 12:31:59.7027||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HotelAPI.Controllers.HotelController.GetAll (HotelAPI) in 42.5628ms 
+2022-08-26 12:31:59.7027||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HotelAPI.Controllers.HotelController.GetAll (HotelAPI)' 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7" completed keep alive response. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HotelDbContext' disposed. 
+2022-08-26 12:31:59.7027||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:5001/api/hotel application/json 146 - 200 - application/json;+charset=utf-8 44.8140ms 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000009": started reading request body. 
+2022-08-26 12:31:59.7027||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK79NQRR5F7", Request id "0HMK79NQRR5F7:00000009": done reading request body. 
