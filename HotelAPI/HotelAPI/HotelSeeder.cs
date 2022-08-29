@@ -1,6 +1,8 @@
 ﻿using HotelAPI.Entities;
+using Microsoft.AspNetCore.Builder;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -25,6 +27,13 @@ namespace HotelAPI
                 {
                     var hotels = GetHotels();
                     _dbContext.Hotels.AddRange(hotels);
+                    _dbContext.SaveChanges();
+                }
+
+                if (!_dbContext.Users.Any())
+                {
+                    var users = GetUsers();
+                    _dbContext.Users.AddRange(users);
                     _dbContext.SaveChanges();
                 }
             }
@@ -99,6 +108,31 @@ namespace HotelAPI
             };
 
             return hotels;
+        }
+
+        private IEnumerable<User> GetUsers()
+        {
+            var users = new List<User>()
+            {
+                new User()
+                {
+                    Name = "Jan Kowalski",
+                    Email = "kowalski@gmail.com",
+                    Nationality = "Polish",
+                    DateOfBirth = new DateTime(1990, 2, 14),
+                    Reservations = new List<Reservation>()
+                },
+                new User()
+                {
+                    Name = "Paweł Dobrzyński",
+                    Email = "dobrzynski@zf.com",
+                    Nationality = "Russian",
+                    DateOfBirth = new DateTime(2001, 3, 22),
+                    Reservations = new List<Reservation>()
+                }
+            };
+
+            return users;
         }
     }
 }

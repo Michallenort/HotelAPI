@@ -93,10 +93,7 @@ namespace HotelAPI.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("ReservationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RoomId")
+                    b.Property<int>("RoomId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
@@ -128,6 +125,9 @@ namespace HotelAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PriceForNight")
                         .HasColumnType("int");
 
                     b.Property<string>("Type")
@@ -179,7 +179,9 @@ namespace HotelAPI.Migrations
                 {
                     b.HasOne("HotelAPI.Entities.Room", "Room")
                         .WithMany("Reservations")
-                        .HasForeignKey("RoomId");
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("HotelAPI.Entities.User", "User")
                         .WithMany("Reservations")

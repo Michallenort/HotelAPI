@@ -12,6 +12,7 @@ namespace HotelAPI.Entities
         public int Number { get; set; }
         public string Type { get; set; }
         public int GuestsNumber { get; set; }
+        public int PriceForNight { get; set; }
 
         public virtual Hotel Hotel { get; set; }
         public int HotelId { get; set; }

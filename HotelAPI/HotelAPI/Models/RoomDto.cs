@@ -12,5 +12,6 @@ namespace HotelAPI.Models
         public int Number { get; set; }
         public string Type { get; set; }
         public int GuestsNumber { get; set; }
+        public int PriceForNight { get; set; }
     }
 }

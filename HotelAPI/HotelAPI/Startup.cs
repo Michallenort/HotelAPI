@@ -34,6 +34,8 @@ namespace HotelAPI
             services.AddControllers();
 
             services.AddScoped<IHotelService, HotelService>();
+            services.AddScoped<IRoomService, RoomService>();
+            services.AddScoped<IReservationService, ReservationService>();
 
             services.AddDbContext<HotelDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("HotelDbConnection")));

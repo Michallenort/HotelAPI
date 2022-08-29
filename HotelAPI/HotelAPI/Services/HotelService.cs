@@ -11,11 +11,11 @@ namespace HotelAPI.Services
 {
     public interface IHotelService
     {
-        public IEnumerable<HotelDto> GetAll();
-        public HotelDto GetById(int id);
-        public int Create(CreateHotelDto dto);
-        public void Update(int id, UpdateHotelDto dto);
-        public void Delete(int id);
+        IEnumerable<HotelDto> GetAll();
+        HotelDto GetById(int id);
+        int Create(CreateHotelDto dto);
+        void Update(int id, UpdateHotelDto dto);
+        void Delete(int id);
     }
 
     public class HotelService : IHotelService

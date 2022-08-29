@@ -28,6 +28,9 @@ namespace HotelAPI
                     PostalCode = dto.PostalCode
                 }));
 
+            CreateMap<CreateRoomDto, Room>();
+
+            CreateMap<CreateReservationDto, Reservation>();
         }
     }
 }
