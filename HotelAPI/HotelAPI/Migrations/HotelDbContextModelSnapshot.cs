@@ -61,6 +61,9 @@ namespace HotelAPI.Migrations
                     b.Property<string>("ContactNumber")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("CreatedById")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -73,6 +76,8 @@ namespace HotelAPI.Migrations
 
                     b.HasIndex("AddressId")
                         .IsUnique();
+
+                    b.HasIndex("CreatedById");
 
                     b.ToTable("Hotels");
                 });
@@ -109,6 +114,22 @@ namespace HotelAPI.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Reservations");
+                });
+
+            modelBuilder.Entity("HotelAPI.Entities.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("HotelAPI.Entities.Room", b =>
@@ -151,15 +172,25 @@ namespace HotelAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nationality")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
 
                     b.ToTable("Users");
                 });
@@ -172,7 +203,13 @@ namespace HotelAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("HotelAPI.Entities.User", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById");
+
                     b.Navigation("Address");
+
+                    b.Navigation("CreatedBy");
                 });
 
             modelBuilder.Entity("HotelAPI.Entities.Reservation", b =>
@@ -203,6 +240,17 @@ namespace HotelAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("Hotel");
+                });
+
+            modelBuilder.Entity("HotelAPI.Entities.User", b =>
+                {
+                    b.HasOne("HotelAPI.Entities.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("HotelAPI.Entities.Address", b =>

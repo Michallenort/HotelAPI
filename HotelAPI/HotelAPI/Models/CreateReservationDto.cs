@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,12 @@ namespace HotelAPI.Models
 {
     public class CreateReservationDto
     {
-        //public string HotelName { get; set; }
+        [Required]
         public DateTime StartDate { get; set; }
+        [Required]
         public DateTime EndDate { get; set; }
 
-        public int RoomId { get; set; }
+        [Required]
         public int UserId { get; set; }
     }
 }

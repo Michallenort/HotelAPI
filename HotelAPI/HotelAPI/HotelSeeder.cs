@@ -1,11 +1,13 @@
 ﻿using HotelAPI.Entities;
 using Microsoft.AspNetCore.Builder;
+using NLog.LayoutRenderers.Wrappers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace HotelAPI
@@ -27,6 +29,13 @@ namespace HotelAPI
                 {
                     var hotels = GetHotels();
                     _dbContext.Hotels.AddRange(hotels);
+                    _dbContext.SaveChanges();
+                }
+
+                if (!_dbContext.Roles.Any())
+                {
+                    var roles = GetRoles();
+                    _dbContext.Roles.AddRange(roles);
                     _dbContext.SaveChanges();
                 }
 
@@ -120,6 +129,8 @@ namespace HotelAPI
                     Email = "kowalski@gmail.com",
                     Nationality = "Polish",
                     DateOfBirth = new DateTime(1990, 2, 14),
+                    RoleId = 1,
+                    //Role = new Role(),
                     Reservations = new List<Reservation>()
                 },
                 new User()
@@ -128,11 +139,34 @@ namespace HotelAPI
                     Email = "dobrzynski@zf.com",
                     Nationality = "Russian",
                     DateOfBirth = new DateTime(2001, 3, 22),
+                    RoleId = 3,
+                    //Role = new Role(),
                     Reservations = new List<Reservation>()
                 }
             };
 
             return users;
+        }
+
+        private IEnumerable<Role> GetRoles()
+        {
+            var roles = new List<Role>()
+            {
+                new Role()
+                {
+                    Name = "User"
+                },
+                new Role()
+                {
+                    Name = "Hotel Owner"
+                },
+                new Role()
+                { 
+                    Name = "Administrator"
+                }
+            };
+
+            return roles;
         }
     }
 }

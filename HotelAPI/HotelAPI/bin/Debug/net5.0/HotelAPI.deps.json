@@ -34,7 +34,8 @@
       "HotelAPI/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.0",
+          "FluentValidation.AspNetCore": "9.4.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.17",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "5.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
@@ -361,6 +362,47 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "FluentValidation/9.4.0": {
+        "runtime": {
+          "lib/net5.0/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidation.AspNetCore/9.4.0": {
+        "dependencies": {
+          "FluentValidation": "9.4.0",
+          "FluentValidation.DependencyInjectionExtensions": "9.4.0"
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {}
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/9.4.0": {
+        "dependencies": {
+          "FluentValidation": "9.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -369,14 +411,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.17": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.7.1"
         },
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.52605"
+            "assemblyVersion": "5.0.17.0",
+            "fileVersion": "5.0.1722.21507"
           }
         },
         "compile": {
@@ -3079,6 +3121,27 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/8.1.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512"
     },
+    "FluentValidation/9.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MfOKZJoGX2B7sh0tEB8BU6pRL/ECvSKiNcrK9QsZ3aQYTVQKL9Fw0FR8qh4Wy9+DIQz9didDiMm0HfCOt6S62A==",
+      "path": "fluentvalidation/9.4.0",
+      "hashPath": "fluentvalidation.9.4.0.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/9.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PxpyAbEDyKK4ERVETidQokeedg4Ncxq6dKJdqiWSZsyaCbyzlb8x4DTPX4fKO4Xw/Xm3ANT7jP3lgDJ0eF029g==",
+      "path": "fluentvalidation.aspnetcore/9.4.0",
+      "hashPath": "fluentvalidation.aspnetcore.9.4.0.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/9.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XRGaMGh+Abyr83fQi4qNBwwwcVIG6EpjUM+p8sD84sIN/byXmuZLyVFRwqa0vVMNRsERkxuxmZIKNU824TfOUg==",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.4.0",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.9.4.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
@@ -3086,12 +3149,12 @@
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
+    "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-26WlfJsOB4QP3VsEVu5GGDSGm5wu6ikQqRUOaZ3BUmyGcMWsD28xFxPxFw4OszYgKpj54QYlyec19KcrEGkqDw==",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.0",
-      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512"
+      "sha512": "sha512-jXMB2+jOG9JvGVCjsKvc5Bo1iSgzdbQw+Iq3BM+eIZ1inDg8rnEVUcWKpRevi9Z6F1/UnSJZ0+rhElT2/aVhhQ==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.17",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.OpenIdConnect/5.0.0": {
       "type": "package",

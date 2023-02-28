@@ -2,12 +2,14 @@
 using AutoMapper.Configuration.Conventions;
 using HotelAPI.Models;
 using HotelAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,10 +17,10 @@ namespace HotelAPI.Controllers
 {
     [Route("api/hotel")]
     [ApiController]
+    [Authorize]
     public class HotelController : ControllerBase
     {
         private readonly IHotelService _hotelService;
-
 
         public HotelController(IHotelService hotelService, IMapper mapper)
         {
@@ -26,6 +28,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public ActionResult<IEnumerable<HotelDto>> GetAll()
         {
             var hotelsDtos = _hotelService.GetAll();
@@ -34,6 +37,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public ActionResult<HotelDto> GetById([FromRoute] int id)
         {
             var hotelDto = _hotelService.GetById(id);
@@ -42,8 +46,10 @@ namespace HotelAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrator,Hotel Owner")]
         public ActionResult CreateRestaurant([FromBody] CreateHotelDto dto)
         {
+            var userId = int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value);
 
             var id = _hotelService.Create(dto);
 
@@ -51,6 +57,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrator,Hotel Owner")]
         public ActionResult Update([FromBody] UpdateHotelDto dto, [FromRoute] int id)
         {
             _hotelService.Update(id, dto);
@@ -59,6 +66,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrator,Hotel Owner")]
         public ActionResult Delete([FromRoute] int id)
         {
             _hotelService.Delete(id);

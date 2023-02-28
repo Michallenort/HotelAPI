@@ -1,11 +1,14 @@
 ﻿using AutoMapper;
+using HotelAPI.Authorization;
 using HotelAPI.Entities;
 using HotelAPI.Exceptions;
 using HotelAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 
 namespace HotelAPI.Services
 {
@@ -20,16 +23,20 @@ namespace HotelAPI.Services
 
     public class HotelService : IHotelService
     {
-
         private readonly HotelDbContext _dbContext;
         private readonly IMapper _mapper;
         private readonly ILogger<HotelService> _logger;
+        private readonly IAuthorizationService _authorizationService;
+        private readonly IUserContextService _userContextService;
 
-        public HotelService(HotelDbContext dbContext, IMapper mapper, ILogger<HotelService> logger)
+        public HotelService(HotelDbContext dbContext, IMapper mapper, ILogger<HotelService> logger, IAuthorizationService authorizationService,
+            IUserContextService userContextService)
         {
             _dbContext = dbContext;
             _mapper = mapper;
             _logger = logger;
+            _authorizationService = authorizationService;
+            _userContextService = userContextService;
         }
 
         public IEnumerable<HotelDto> GetAll()
@@ -56,6 +63,7 @@ namespace HotelAPI.Services
         public int Create(CreateHotelDto dto)
         {
             var hotel = _mapper.Map<Hotel>(dto);
+            hotel.CreatedById = _userContextService.GetUserId;
             _dbContext.Hotels.Add(hotel);
             _dbContext.SaveChanges();
 
@@ -70,6 +78,14 @@ namespace HotelAPI.Services
             if (hotel is null)
                 throw new NotFoundException("Hotel not found");
 
+            var authorizationResult = 
+                _authorizationService.AuthorizeAsync(_userContextService.User, 
+                    hotel, new ResourceOperationRequirement(ResourceOperation.Update)).Result;
+
+            if (!authorizationResult.Succeeded)
+            {
+                throw new ForbidException();
+            }
 
             hotel.Name = dto.Name;
             hotel.Description = dto.Description;
@@ -86,6 +102,15 @@ namespace HotelAPI.Services
 
             if (hotel is null)
                 throw new NotFoundException("Hotel not found");
+
+            var authorizationResult =
+                _authorizationService.AuthorizeAsync(_userContextService.User,
+                    hotel, new ResourceOperationRequirement(ResourceOperation.Delete)).Result;
+
+            if (!authorizationResult.Succeeded)
+            {
+                throw new ForbidException();
+            }
 
             _dbContext.Hotels.Remove(hotel);
             _dbContext.SaveChanges();

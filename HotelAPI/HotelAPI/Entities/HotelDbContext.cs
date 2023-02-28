@@ -18,6 +18,7 @@ namespace HotelAPI.Entities
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -38,12 +39,13 @@ namespace HotelAPI.Entities
                 .Property(r => r.Number).IsRequired();
 
             modelBuilder.Entity<User>()
-                .Property(u => u.Name);
+                .Property(u => u.Name).IsRequired();
 
             modelBuilder.Entity<User>()
-                .Property(u => u.Email);
+                .Property(u => u.Email).IsRequired();
 
-            
+            modelBuilder.Entity<Role>()
+                .Property(r => r.Name).IsRequired();
         }
 
     }

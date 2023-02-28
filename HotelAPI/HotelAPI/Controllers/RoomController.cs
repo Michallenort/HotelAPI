@@ -1,5 +1,6 @@
 ﻿using HotelAPI.Models;
 using HotelAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace HotelAPI.Controllers
 {
     [Route("api/hotel/{hotelId}/room")]
     [ApiController]
+    [Authorize]
     public class RoomController : ControllerBase
     {
         private readonly IRoomService _roomService;
@@ -21,6 +23,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public ActionResult<List<RoomDto>> Get([FromRoute] int hotelId)
         {
             var result = _roomService.GetAll(hotelId);
@@ -29,6 +32,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpGet("{roomId}")]
+        [AllowAnonymous]
         public ActionResult<RoomDto> Get([FromRoute] int hotelId, [FromRoute] int roomId)
         {
             RoomDto room = _roomService.GetById(hotelId, roomId);
@@ -37,6 +41,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Hotel Owner")]
         public ActionResult Post([FromRoute] int hotelId, [FromBody] CreateRoomDto dto)
         {
             var newRoomId = _roomService.Create(hotelId, dto);
@@ -45,6 +50,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpPut("{roomId}")]
+        [Authorize(Roles = "Hotel Owner")]
         public ActionResult Put([FromRoute] int hotelId, [FromRoute] int roomId, [FromBody] UpdateRoomDto dto)
         {
             _roomService.Update(hotelId, roomId, dto);
@@ -53,6 +59,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpDelete("{roomId}")]
+        [Authorize(Roles = "Hotel Owner")]
         public ActionResult Delete([FromRoute] int hotelId, [FromRoute] int roomId)
         {
             _roomService.DeleteById(hotelId, roomId);
@@ -61,6 +68,7 @@ namespace HotelAPI.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "Hotel Owner")]
         public ActionResult Delete([FromRoute] int hotelId)
         {
             _roomService.DeleteAll(hotelId);

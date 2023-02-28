@@ -31,6 +31,18 @@ namespace HotelAPI
             CreateMap<CreateRoomDto, Room>();
 
             CreateMap<CreateReservationDto, Reservation>();
+
+            CreateMap<Reservation, ReservationDto>()
+                .ForMember(r => r.RoomNumber, c => c.MapFrom(s => s.Room.Number))
+                .ForMember(r => r.GuestsNumber, c => c.MapFrom(s => s.Room.GuestsNumber))
+                .ForMember(r => r.GuestName, c => c.MapFrom(s => s.User.Name))
+                .ForMember(r => r.Email, c => c.MapFrom(s => s.User.Email));
+
+            CreateMap<User, UserDto>();
+
+            CreateMap<CreateUserDto, User>();
+
+            CreateMap<CreateAdminDto, User>();
         }
     }
 }
